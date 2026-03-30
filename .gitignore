@@ -1,0 +1,14 @@
+# Secrets
+.env*
+environments/*.secrets.yml
+
+# Dependencies
+node_modules
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Bruno cache
+.bruno/
