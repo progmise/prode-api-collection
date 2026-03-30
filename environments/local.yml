@@ -1,0 +1,16 @@
+name: local
+variables:
+  - name: protocol
+    value: http
+  - name: host
+    value: localhost:5000
+  - name: path_api
+    value: /prode_api
+  - name: fecha
+    value: 2022-11-22
+  - name: equipo
+    value: ARGENTINA
+  - name: fase
+    value: GRUPOS
+  - name: partido_id
+    value: "1"

@@ -1,0 +1,15 @@
+info:
+  name: Delete partido by id
+  type: http
+  seq: 4
+
+http:
+  method: DELETE
+  url: "{{protocol}}://{{host}}{{path_api}}/partidos/100"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
