@@ -1,0 +1,22 @@
+info:
+  name: Get usuarios
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{protocol}}://{{host}}{{path_api}}/usuarios?_offset=0&_limit=10"
+  params:
+    - name: _offset
+      value: "0"
+      type: query
+    - name: _limit
+      value: "10"
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

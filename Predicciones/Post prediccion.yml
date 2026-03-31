@@ -1,0 +1,23 @@
+info:
+  name: Post prediccion
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{protocol}}://{{host}}{{path_api}}/partidos/{{partido_id}}/prediccion"
+  body:
+    type: json
+    data: |-
+      {
+        "id_usuario": 1,
+        "local": 2,
+        "visitante": 1
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

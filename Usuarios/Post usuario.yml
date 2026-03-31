@@ -1,0 +1,22 @@
+info:
+  name: Post usuario
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{protocol}}://{{host}}{{path_api}}/usuarios"
+  body:
+    type: json
+    data: |-
+      {
+        "nombre": "Juan González",
+        "email": "juan@example.com"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

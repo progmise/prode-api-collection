@@ -11,7 +11,7 @@ Colección de requests [Bruno](https://www.usebruno.com/) para la API de ProDe. 
 ```
 ProDe API/
 ├── environments/
-│   └── local.yml         # Variables de entorno local
+│   └── local.yml               # Variables de entorno local
 ├── Partidos/
 │   ├── Get partidos.yml        # Listar partidos con filtros
 │   ├── Get partido by id.yml   # Obtener un partido por ID
@@ -19,8 +19,18 @@ ProDe API/
 │   ├── Put partido by id.yml   # Reemplazar un partido
 │   ├── Patch partido by id.yml # Actualizar parcialmente un partido
 │   └── Delete partido by id.yml# Eliminar un partido
-└── Resultados/
-    └── Put resultado.yml       # Registrar resultado de un partido
+├── Resultados/
+│   └── Put resultado.yml       # Registrar resultado de un partido
+├── Predicciones/
+│   └── Post prediccion.yml     # Registrar una predicción para un partido
+├── Usuarios/
+│   ├── Get usuarios.yml        # Listar usuarios
+│   ├── Get usuario by id.yml   # Obtener un usuario por ID
+│   ├── Post usuario.yml        # Crear un usuario
+│   ├── Put usuario by id.yml   # Reemplazar un usuario
+│   └── Delete usuario by id.yml# Eliminar un usuario
+└── Ranking/
+    └── Get ranking.yml         # Obtener el ranking de usuarios
 ```
 
 ## Endpoints
@@ -52,6 +62,28 @@ ProDe API/
 |--------|----------|-------------|
 | `PUT` | `/prode_api/partidos/:id/resultado` | Carga el resultado de un partido |
 
+### Predicciones
+
+| Método | Endpoint | Descripción |
+|--------|----------|-------------|
+| `POST` | `/prode_api/partidos/:id/prediccion` | Registra una predicción para un partido |
+
+### Usuarios
+
+| Método | Endpoint | Descripción |
+|--------|----------|-------------|
+| `GET` | `/prode_api/usuarios` | Lista usuarios |
+| `GET` | `/prode_api/usuarios/:id` | Obtiene un usuario por ID |
+| `POST` | `/prode_api/usuarios` | Crea un nuevo usuario |
+| `PUT` | `/prode_api/usuarios/:id` | Reemplaza todos los campos de un usuario |
+| `DELETE` | `/prode_api/usuarios/:id` | Elimina un usuario |
+
+### Ranking
+
+| Método | Endpoint | Descripción |
+|--------|----------|-------------|
+| `GET` | `/prode_api/ranking` | Obtiene el ranking de usuarios |
+
 ## Variables de entorno
 
 El entorno `local` incluye las siguientes variables configurables:
@@ -65,6 +97,7 @@ El entorno `local` incluye las siguientes variables configurables:
 | `equipo` | `ARGENTINA` | Equipo de ejemplo |
 | `fase` | `GRUPOS` | Fase de ejemplo |
 | `partido_id` | `1` | ID de partido de ejemplo |
+| `usuario_id` | `1` | ID de usuario de ejemplo |
 
 ## Uso
 
