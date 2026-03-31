@@ -16,6 +16,8 @@ ProDe API/
 │   ├── Get partidos.yml        # Listar partidos con filtros
 │   ├── Get partido by id.yml   # Obtener un partido por ID
 │   ├── Post partido.yml        # Crear un nuevo partido
+│   ├── Put partido by id.yml   # Reemplazar un partido
+│   ├── Patch partido by id.yml # Actualizar parcialmente un partido
 │   └── Delete partido by id.yml# Eliminar un partido
 └── Resultados/
     └── Put resultado.yml       # Registrar resultado de un partido
@@ -30,6 +32,8 @@ ProDe API/
 | `GET` | `/prode_api/partidos` | Lista partidos con filtros opcionales |
 | `GET` | `/prode_api/partidos/:id` | Obtiene un partido por ID |
 | `POST` | `/prode_api/partidos` | Crea un nuevo partido |
+| `PUT` | `/prode_api/partidos/:id` | Reemplaza todos los campos de un partido |
+| `PATCH` | `/prode_api/partidos/:id` | Actualiza parcialmente un partido |
 | `DELETE` | `/prode_api/partidos/:id` | Elimina un partido |
 
 #### Filtros disponibles en GET /partidos

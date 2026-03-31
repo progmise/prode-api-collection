@@ -1,0 +1,24 @@
+info:
+  name: Patch partido by id
+  type: http
+  seq: 5
+
+http:
+  method: PATCH
+  url: "{{protocol}}://{{host}}{{path_api}}/partidos/{{partido_id}}"
+  body:
+    type: json
+    data: |-
+      {
+        "equipo_local": "Brasil",
+        "equipo_visitante": "Argentina",
+        "fase": "{{fase}}",
+        "fecha": "{{fecha}}"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
